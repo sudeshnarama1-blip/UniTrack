@@ -16,7 +16,7 @@ function Dashboard() {
 
       <Sidebar />
 
-      <section className="flex-1 px-14 py-12">
+      <section className="flex-1 min-w-0 px-5 pt-8 pb-28 md:px-14 md:py-12">
 
         {/* Hero */}
         <div className="max-w-3xl">
@@ -25,7 +25,7 @@ function Dashboard() {
             Student Workspace
           </p>
 
-          <h2 className="text-5xl font-bold mt-5 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mt-5 leading-tight">
             Academic Overview
           </h2>
 

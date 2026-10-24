@@ -54,7 +54,7 @@ function Assignments() {
 
       <Sidebar />
 
-      <section className="flex-1 px-14 py-12">
+      <section className="flex-1 min-w-0 px-5 pt-8 pb-28 md:px-14 md:py-12">
 
         {/* Header */}
         <div className="max-w-3xl">
@@ -63,7 +63,7 @@ function Assignments() {
             Assignment Tracker
           </p>
 
-          <h1 className="text-5xl font-bold mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mt-5">
             Assignments Overview
           </h1>
 
@@ -84,7 +84,7 @@ function Assignments() {
               Pending Tasks
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-red-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-red-400">
               4
             </h2>
 
@@ -101,7 +101,7 @@ function Assignments() {
               Completed Tasks
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-cyan-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-cyan-400">
               12
             </h2>
 
@@ -118,7 +118,7 @@ function Assignments() {
               Upcoming Deadlines
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-pink-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-pink-400">
               3
             </h2>
 

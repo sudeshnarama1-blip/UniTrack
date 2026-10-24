@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 
 function Profile() {
+
+  const navigate = useNavigate()
 
   const student = {
     name: "Sana Anthony",
@@ -15,7 +18,7 @@ function Profile() {
 
       <Sidebar />
 
-      <section className="flex-1 px-14 py-12">
+      <section className="flex-1 min-w-0 px-5 pt-8 pb-28 md:px-14 md:py-12">
 
         {/* Header */}
         <div className="max-w-3xl">
@@ -24,7 +27,7 @@ function Profile() {
             Student Profile
           </p>
 
-          <h1 className="text-5xl font-bold mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mt-5">
             Profile Overview
           </h1>
 
@@ -35,7 +38,7 @@ function Profile() {
         </div>
 
         {/* Profile Card */}
-        <div className="mt-16 bg-white/5 border border-white/10 rounded-[32px] p-10 max-w-5xl">
+        <div className="mt-16 bg-white/5 border border-white/10 rounded-[32px] p-6 md:p-10 max-w-5xl">
 
           <div className="flex flex-col xl:flex-row gap-10 items-start">
 
@@ -104,7 +107,7 @@ function Profile() {
 
                   localStorage.removeItem("isLoggedIn")
 
-                  window.location.href = "/login"
+                  navigate("/login")
 
                 }}
                 className="mt-10 bg-red-500 hover:bg-red-600 transition px-8 py-4 rounded-2xl font-semibold"

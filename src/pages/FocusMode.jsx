@@ -83,7 +83,7 @@ function FocusMode() {
 
       <Sidebar />
 
-      <section className="flex-1 px-14 py-12">
+      <section className="flex-1 min-w-0 px-5 pt-8 pb-28 md:px-14 md:py-12">
 
         {/* Header */}
         <div className="max-w-3xl">
@@ -92,7 +92,7 @@ function FocusMode() {
             Focus Mode
           </p>
 
-          <h1 className="text-5xl font-bold mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mt-5">
             Deep Work Session
           </h1>
 
@@ -113,7 +113,7 @@ function FocusMode() {
               Current Session
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-cyan-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-cyan-400">
               {formatTime(minutes)}:{formatTime(seconds)}
             </h2>
 
@@ -130,7 +130,7 @@ function FocusMode() {
               Today's Study Time
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-pink-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-pink-400">
               3.5h
             </h2>
 
@@ -147,7 +147,7 @@ function FocusMode() {
               Focus Score
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-purple-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-purple-400">
               89
             </h2>
 
@@ -163,13 +163,13 @@ function FocusMode() {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-16">
 
           {/* Timer */}
-          <div className="bg-white/5 border border-white/10 rounded-[28px] p-10 flex flex-col items-center justify-center">
+          <div className="bg-white/5 border border-white/10 rounded-[28px] p-6 md:p-10 flex flex-col items-center justify-center">
 
             <p className="text-sm uppercase tracking-[0.25em] text-cyan-400">
               Active Session
             </p>
 
-            <h1 className="text-8xl font-bold mt-8">
+            <h1 className="text-6xl md:text-8xl font-bold mt-8">
               {formatTime(minutes)}:{formatTime(seconds)}
             </h1>
 

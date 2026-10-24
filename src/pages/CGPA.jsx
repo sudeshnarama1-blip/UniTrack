@@ -37,7 +37,7 @@ function CGPA() {
 
       <Sidebar />
 
-      <section className="flex-1 px-14 py-12">
+      <section className="flex-1 min-w-0 px-5 pt-8 pb-28 md:px-14 md:py-12">
 
         {/* Header */}
         <div className="max-w-3xl">
@@ -46,7 +46,7 @@ function CGPA() {
             CGPA Tracker
           </p>
 
-          <h1 className="text-5xl font-bold mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mt-5">
             Academic Performance
           </h1>
 
@@ -67,7 +67,7 @@ function CGPA() {
               Current CGPA
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-cyan-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-cyan-400">
               8.7
             </h2>
 
@@ -84,7 +84,7 @@ function CGPA() {
               Best Semester
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-pink-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-pink-400">
               9.1
             </h2>
 
@@ -101,7 +101,7 @@ function CGPA() {
               Credits Earned
             </p>
 
-            <h2 className="text-5xl font-bold mt-4 text-purple-400">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-purple-400">
               96
             </h2>
 
@@ -142,7 +142,7 @@ function CGPA() {
 
                   </div>
 
-                  <h2 className={`text-5xl font-bold ${semester.color}`}>
+                  <h2 className={`text-4xl md:text-5xl font-bold ${semester.color}`}>
                     {semester.sgpa}
                   </h2>
 

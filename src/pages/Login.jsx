@@ -32,13 +32,13 @@ function Login() {
   return (
     <main className="min-h-screen bg-[#070014] text-white flex items-center justify-center px-6">
 
-      <div className="w-full max-w-md bg-white/5 border border-white/10 rounded-[32px] p-10 backdrop-blur-xl">
+      <div className="w-full max-w-md bg-white/5 border border-white/10 rounded-[32px] p-6 md:p-10 backdrop-blur-xl">
 
         <p className="text-sm uppercase tracking-[0.25em] text-cyan-400">
           UniTrack Access
         </p>
 
-        <h1 className="text-5xl font-bold mt-5">
+        <h1 className="text-4xl md:text-5xl font-bold mt-5">
           Student Login
         </h1>
 
@@ -80,6 +80,16 @@ function Login() {
           className="w-full mt-8 bg-gradient-to-r from-pink-500 to-cyan-400 rounded-2xl py-4 font-semibold text-black"
         >
           Login
+        </button>
+
+        <button
+          onClick={() => {
+            localStorage.setItem("isLoggedIn", "true")
+            navigate("/")
+          }}
+          className="w-full mt-3 border border-white/15 hover:bg-white/5 rounded-2xl py-4 font-semibold transition"
+        >
+          Try the demo
         </button>
 
         {/* Demo Credentials */}
