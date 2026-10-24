@@ -5,6 +5,8 @@
 UniTrack is a student productivity app that brings attendance, CGPA, assignments and focused study time into one clean dashboard. It works on desktop and phone, and can be installed on a phone's home screen like a regular app.
 
 🔗 **Live app:** https://sudeshnarama1-blip.github.io/UniTrack/
+📱 **Android app:** [Download UniTrack.apk](https://github.com/sudeshnarama1-blip/UniTrack/releases/latest/download/UniTrack.apk)
+
 Tap **Try the demo** on the login screen, or sign in with Student ID `2025CS101` and password `unitrack`.
 
 ---
@@ -30,6 +32,7 @@ The current version uses sample data to demonstrate the experience.
 | Icons | Lucide |
 | Build tool | Vite |
 | App layer | Web App Manifest + Service Worker (PWA) |
+| Android app | Capacitor, built automatically with GitHub Actions |
 | Hosting | GitHub Pages, deployed automatically with GitHub Actions |
 
 ## Run it locally
