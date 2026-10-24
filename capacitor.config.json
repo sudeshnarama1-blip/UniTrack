@@ -1,0 +1,9 @@
+{
+  "appId": "com.ramasudeshna.unitrack",
+  "appName": "UniTrack",
+  "webDir": "dist",
+  "backgroundColor": "#070014",
+  "android": {
+    "backgroundColor": "#070014"
+  }
+}

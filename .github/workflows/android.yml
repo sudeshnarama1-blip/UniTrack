@@ -1,0 +1,59 @@
+# Builds the UniTrack Android app (APK) and publishes it as a download
+# on the repo's Releases page: .../releases/latest/download/UniTrack.apk
+name: Build Android app
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build the web app
+        run: |
+          npm ci
+          npm run build
+
+      - name: Add Capacitor and create the Android project
+        run: |
+          npm install --no-save @capacitor/core @capacitor/cli @capacitor/android @capacitor/assets
+          npx cap add android
+          npx capacitor-assets generate --android --iconBackgroundColor '#070014' --splashBackgroundColor '#070014'
+          npx cap sync android
+
+      - name: Build the APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          cp app/build/outputs/apk/debug/app-debug.apk ../UniTrack.apk
+
+      - name: Publish the APK on the Releases page
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete android-app --yes --cleanup-tag || true
+          gh release create android-app UniTrack.apk \
+            --title "UniTrack Android app" \
+            --notes "Download UniTrack.apk on an Android phone and open it to install. You may need to allow installing apps from your browser."
